@@ -1,0 +1,56 @@
+/* Tag selectors */
+html, body {
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: hsl(240, 38%, 20%);
+}
+
+/* Class selectors */
+.content {
+    margin: 15% 10%;
+    position: relative;
+}
+
+.quote {
+    width: 55%;
+    padding: 2% 0 0 4%;
+}
+
+.curve-img {
+    position: fixed;
+    bottom: 0;
+} 
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Sudo selectors */
+.content::before {
+    content: "";
+    background: url("/coding-bootcamp-testimonials-slider-master/images/pattern-quotes.svg") no-repeat center center/cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+}
+
+.content::after {
+    content: "";
+    background: url("/coding-bootcamp-testimonials-slider-master/images/pattern-bg.svg") no-repeat center center/cover;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    width: 40%;
+    height: 100%;
+}
